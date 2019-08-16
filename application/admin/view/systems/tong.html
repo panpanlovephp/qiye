@@ -1,0 +1,309 @@
+{__NOLAYOUT__}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link href="__PUBLIC__/admin/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="__PUBLIC__/admin/css/style.css"/>
+    <link href="__PUBLIC__/admin/assets/css/codemirror.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/admin/assets/css/ace.min.css" />
+    <link rel="stylesheet" href="__PUBLIC__/admin/font/css/font-awesome.min.css" />
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="__PUBLIC__/admin/assets/css/ace-ie.min.css" />
+    <![endif]-->
+    <script src="__PUBLIC__/admin/js/jquery-1.9.1.min.js"></script>
+    <script src="__PUBLIC__/admin/assets/js/typeahead-bs2.min.js"></script>
+    <script src="__PUBLIC__/admin/js/lrtk.js" type="text/javascript" ></script>
+    <script src="__PUBLIC__/admin/assets/js/jquery.dataTables.min.js"></script>
+    <script src="__PUBLIC__/admin/assets/js/jquery.dataTables.bootstrap.js"></script>
+    <script src="__PUBLIC__/admin/assets/layer/layer.js" type="text/javascript" ></script>
+    <script src="__PUBLIC__/admin/assets/dist/echarts.js"></script>
+    <script src="__PUBLIC__/admin/js/Chart.min.js"></script>
+    <title>系统统计</title>
+</head>
+
+<body>
+    <div class="clearfix">
+       <div id="Statistics" class="Statistics" style="width: 50%;float: left; border-right:1px solid #ddd "></div>
+       <div id="Wx" class="Statistics" style="width: 48%;float: left; border-right:1px solid #ddd "></div>
+       <div id="Chong" class="Statistics" style="width: 50%;float: left; border-right:1px solid #ddd "></div>
+       <div id="Order" class="Statistics" style="width: 48%;float: left; border-right:1px solid #ddd "></div>
+    </div>
+<script type="text/javascript">
+    require.config({
+        paths: {
+            echarts: '__PUBLIC__/admin/assets/dist'
+        }
+    });
+    require(
+            [
+
+                'echarts',
+                'echarts/theme/macarons',
+                'echarts/chart/pie',   // 按需加载所需图表，如需动态类型切换功能，别忘了同时加载相应图表
+                'echarts/chart/funnel'
+            ],
+            function (ec,theme) {
+                var myChart = ec.init(document.getElementById('Statistics'),theme);
+
+                option = {
+                    title : {
+                        text: '用户等级统计',
+                        subtext: '实时更新最新等级',
+                        x:'center'
+                    },
+                    tooltip : {
+                        trigger: 'item',
+                        formatter: "{a} <br/>{b} : {c} ({d}%)"
+                    },
+                    legend: {
+
+                        x : 'center',
+                        y : 'bottom',
+                        data:['普通会员','体验会员','代言人','代理商']
+                    },
+                    toolbox: {
+                        show : true,
+                        feature : {
+                            mark : {show: false},
+                            dataView : {show: false, readOnly: true},
+                            magicType : {
+                                show: true,
+                                type: ['pie', 'funnel'],
+                                option: {
+                                    funnel: {
+                                        x: '25%',
+                                        width: '50%',
+                                        funnelAlign: 'left',
+                                        max: 6200
+                                    }
+                                }
+                            },
+                            restore : {show: true},
+                            saveAsImage : {show: true}
+                        }
+                    },
+                    calculable : true,
+                    series : [
+                        {
+                            name:'会员等级占比',
+                            type:'pie',
+                            radius : '55%',
+                            center: ['50%', '60%'],
+                            data:[
+                                {value:{$pnum}, name:'普通会员'},
+                                {value:{$tnum}, name:'体验会员'},
+                                {value:{$dnum}, name:'代言人'},
+                                {value:{$lnum}, name:'代理商'},
+
+                            ]
+                        }
+                    ]
+                };
+                myChart.setOption(option);
+            }
+    );
+    require(
+            [
+
+                'echarts',
+                'echarts/theme/macarons',
+                'echarts/chart/pie',   // 按需加载所需图表，如需动态类型切换功能，别忘了同时加载相应图表
+                'echarts/chart/funnel'
+            ],
+            function (ec,theme) {
+                var myChart = ec.init(document.getElementById('Wx'),theme);
+
+                option = {
+                    title : {
+                        text: '微信关注统计',
+                        subtext: '实时更新微信最新动态',
+                        x:'center'
+                    },
+                    tooltip : {
+                        trigger: 'item',
+                        formatter: "{a} <br/>{b} : {c} ({d}%)"
+                    },
+                    legend: {
+
+                        x : 'center',
+                        y : 'bottom',
+                        data:['取消关注','已关注']
+                    },
+                    toolbox: {
+                        show : true,
+                        feature : {
+                            mark : {show: false},
+                            dataView : {show: false, readOnly: true},
+                            magicType : {
+                                show: true,
+                                type: ['pie', 'funnel'],
+                                option: {
+                                    funnel: {
+                                        x: '25%',
+                                        width: '50%',
+                                        funnelAlign: 'left',
+                                        max: 6200
+                                    }
+                                }
+                            },
+                            restore : {show: true},
+                            saveAsImage : {show: true}
+                        }
+                    },
+                    calculable : true,
+                    series : [
+                        {
+                            name:'微信关注占比',
+                            type:'pie',
+                            radius : '55%',
+                            center: ['50%', '60%'],
+                            data:[
+                                {value:{$nonum}, name:'取消关注'},
+                                {value:{$yesnum}, name:'已关注'},
+
+                            ]
+                        }
+                    ]
+                };
+                myChart.setOption(option);
+            }
+    );
+    require(
+            [
+
+                'echarts',
+                'echarts/theme/macarons',
+                'echarts/chart/pie',   // 按需加载所需图表，如需动态类型切换功能，别忘了同时加载相应图表
+                'echarts/chart/funnel'
+            ],
+            function (ec,theme) {
+                var myChart = ec.init(document.getElementById('Chong'),theme);
+
+                option = {
+                    title : {
+                        text: '虫豆情况统计',
+                        subtext: '虫豆总数{$cum}',
+                        x:'center'
+                    },
+                    tooltip : {
+                        trigger: 'item',
+                        formatter: "{a} <br/>{b} : {c} ({d}%)"
+                    },
+                    legend: {
+                        x : 'center',
+                        y : 'bottom',
+                        data:['未兑换','已兑换']
+                    },
+                    toolbox: {
+                        show : true,
+                        feature : {
+                            mark : {show: false},
+                            dataView : {show: false, readOnly: true},
+                            magicType : {
+                                show: true,
+                                type: ['pie', 'funnel'],
+                                option: {
+                                    funnel: {
+                                        x: '25%',
+                                        width: '50%',
+                                        funnelAlign: 'left',
+                                        max: 6200
+                                    }
+                                }
+                            },
+                            restore : {show: true},
+                            saveAsImage : {show: true}
+                        }
+                    },
+                    calculable : true,
+                    series : [
+                        {
+                            name:'虫豆兑换占比',
+                            type:'pie',
+                            radius : '55%',
+                            center: ['50%', '60%'],
+                            data:[
+                                {value:{$lum}, name:'未兑换'},
+                                {value:{$zum}, name:'已兑换'},
+
+                            ]
+                        }
+                    ]
+                };
+                myChart.setOption(option);
+            }
+    );
+    require(
+            [
+
+                'echarts',
+                'echarts/theme/macarons',
+                'echarts/chart/pie',   // 按需加载所需图表，如需动态类型切换功能，别忘了同时加载相应图表
+                'echarts/chart/funnel'
+            ],
+            function (ec,theme) {
+                var myChart = ec.init(document.getElementById('Order'),theme);
+
+                option = {
+                    title : {
+                        text: '订单统计',
+                        subtext: '订单总数{$ordernum}',
+                        x:'center'
+                    },
+                    tooltip : {
+                        trigger: 'item',
+                        formatter: "{a} <br/>{b} : {c} ({d}%)"
+                    },
+                    legend: {
+                        x : 'center',
+                        y : 'bottom',
+                        data:['未付款','已付款','已发货','已签收']
+                    },
+                    toolbox: {
+                        show : true,
+                        feature : {
+                            mark : {show: false},
+                            dataView : {show: false, readOnly: true},
+                            magicType : {
+                                show: true,
+                                type: ['pie', 'funnel'],
+                                option: {
+                                    funnel: {
+                                        x: '25%',
+                                        width: '50%',
+                                        funnelAlign: 'left',
+                                        max: 6200
+                                    }
+                                }
+                            },
+                            restore : {show: true},
+                            saveAsImage : {show: true}
+                        }
+                    },
+                    calculable : true,
+                    series : [
+                        {
+                            name:'订单占比',
+                            type:'pie',
+                            radius : '55%',
+                            center: ['50%', '60%'],
+                            data:[
+                                {value:{$wfum}, name:'未付款'},
+                                {value:{$wum}, name:'已付款'},
+                                {value:{$yum}, name:'已发货'},
+                                {value:{$qum}, name:'已签收'},
+                            ]
+                        }
+                    ]
+                };
+                myChart.setOption(option);
+            }
+    );
+</script>
+
+</div>
+</body>
+</html>

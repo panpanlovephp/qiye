@@ -1,0 +1,57 @@
+{include file="public:header" /}
+
+<div class="main-wrap">
+    <div class="crumb-wrap">
+        <div class="crumb-list">
+            <i class="icon-font"></i><a href="{:url('Index/index')}">首页</a>
+            <span class="crumb-step">&gt;</span><span>设置权限</span>
+        </div>
+    </div>
+    <div class="result-wrap">
+        <div class="result-content">
+            <form action="{:url('setauth')}" method="post"  id="form" enctype="multipart/form-data">
+                <table class="insert-tab" width="100%">
+                    <tbody>
+                    <input type="hidden" name="id" value="{$data.id}">
+                    <tr>
+                        <th>类型：</th>
+                        <td>
+                            <label for="a">
+                                <input type="radio" id="a" value="1" name="qx_type" {if condition="$data.qx_type eq 1"}checked{/if}>渠道经理
+                            </label>
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <label for="b">
+                                <input type="radio" id="b" value="2" name="qx_type" {if condition="$data.qx_type eq 2"}checked{/if}>区域经理
+                            </label>
+                            <select name="shi" id="" class="common-text" style="width: 200px;">
+                                <option value="0">请选择</option>
+                                {volist name="quyu" id="v"}
+                                <option value="{$v.id}"   {if condition="$v.id eq  $data.shi"}selected{/if}>{$v.title}区域经理</option>
+                                {/volist}
+                            </select>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <th></th>
+                        <td>
+                            <input class="btn btn-primary btn6 mr10" value="提交" type="submit">
+                            <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
+                        </td>
+                    </tr>
+                    </tbody>
+
+                </table>
+
+
+            </form>
+        </div>
+    </div>
+
+</div>
+<!--/main-->
+</div>
+</body>
+</html>

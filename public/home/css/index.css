@@ -1,0 +1,425 @@
+*{
+    padding: 0;margin: 0;
+}
+li{list-style: none;}
+a{text-decoration: none; }
+.box:after{
+    clear: both;
+    content: '';
+    display: block;
+}
+p{margin: 0;}
+/* topBg */
+.container{padding: 0;}
+.index{
+    width: 100%;
+    background: #242738 url(../img/index/background-index.jpg) center top repeat-x;;
+}
+.topBground{width: 100%;}
+.topCenter{width: 65%;margin: 0 auto;}
+.text-write{
+    color: #fff !important;
+}
+.text-color{
+    color: #1e9fb4 !important;
+}
+.bg-color{
+    background: #1e9fb4 !important;
+}
+.img{
+    width: 100%;
+    background:url(../img/index/banner1.png) right bottom no-repeat;
+}
+.img2{
+    width: 100%;
+    background:url(../img/index/banner2.png) right bottom no-repeat;
+}
+.text-h1{
+    font-size: 56px;
+    font-weight: 700;
+    float: left;
+    margin: 106px 0 25px 0;
+}
+.text-h2{
+    font-size: 26px;
+    font-weight: 700;
+    float: left;
+    clear:left;
+}
+.topList{
+    width: 50%;
+    float: left;
+    clear:left;
+}
+.list{
+    float: left;
+    
+}
+.listItem{
+    font-size: 16px;
+    line-height: 20px;    
+    background: url(../img/index/listitem.png) left center no-repeat ;
+    padding: 10px 0 10px 30px;
+}
+.pic{
+    float: left;
+    text-align: center;
+    height:200px;
+    width: 45%;
+    background: url(../img/index/slidepricebg.png) center center no-repeat; 
+    font-size: 21px;
+    font-weight: 700;
+}
+.line1{padding: 35px 0 0 0}
+.line2,.line3{
+    padding: 3px 0 0 0;
+}
+.btn{
+    margin-top: 28px;
+    padding: 12px 44px !important;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 42px;
+}
+/* 域名选择 */
+.search{
+    width: 100%;
+    background: url(../img/index/texture.png) repeat;
+}
+.check{
+    width: 65%;
+    margin: 0 auto;
+    padding: 80px 0 50px 0;
+}
+.check>.left{
+    width: 49%;
+    float: left;
+    margin: 0 2% 0 0;
+    line-height: 2rem;
+}
+.check>.left>p:first-child{
+    font-size: 2.3rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+.check>.left>p:last-child{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.check>.right{
+    width: 49%;
+    float: left;
+    margin: 0;
+}
+.outoLine{
+    width: 57% !important;
+    height: 60px;
+    outline: none;
+    border-right:none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.outoLineL{
+    width: 22% !important;
+    height: 60px !important;
+    outline: none;
+    border-left:none;
+    border-radius:0;
+}
+.form-group{
+    width: 100%;
+    height: 60px;
+}
+.btnSearch{
+    width: 21%;
+    margin: 0;
+    padding: 0.9rem 2.1rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background: #303345;
+    color: #fff;
+    font-weight: 400;
+}
+.form-control:focus{ 
+    border-color:#ccc; 
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075); 
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+.raiouSearch{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0 0 0;
+}
+.iconSearch{
+    width: 18%;
+    height: 107px;
+    background: url(../img/index/domainpricing.png) center center no-repeat;
+    color:  #696969;
+    text-align: center;
+    padding: 25px 0 0 0;
+}
+.iconSearch>p:first-child{font-size: 1.4rem;font-weight: 600;}
+.iconSearch>p:last-child{font-weight: 600;}
+/* 公告 */
+.notice{
+    width: 100%;
+    background: #e2e2e2;
+}
+.noticeCenter{
+    width: 65%;
+    margin: 0 auto;
+    
+    padding: 60px 0;
+    line-height: 24px;
+    font-size: 20px;
+}
+.noticeCenter h2{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+.noticeCenter p{
+    
+    color: #696969;
+    margin: 0 0 25px 0;
+}
+/* 产品列表 */
+.choseCard{
+    width: 100%;
+    background: #242738 url(../img/index/background-index.jpg) left top repeat;
+    padding: 40px 0 45px 0;
+}
+.cardAll{
+    width: 65%;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+}
+.cardAll h2{
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 0 25px 0;
+
+}
+.cardList{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.cardItem{
+    width: 32%;
+    background: #ffffff url(../img/index/featureboxesbg.png) left top repeat-x;
+    border-radius: 5px;
+}
+.cardItem:hover{
+    transform:translateY(-10px);
+    transition-duration:1s;
+    box-shadow:0px 0px 15px  #fff;
+}
+.cardTitle{
+    width: 100%;
+}
+.cardTitle h2{
+    padding: 20px 30px 7px 30px;
+    font-size: 20px;
+    font-weight: 100;
+}
+.cardPic{
+    width: 100%;
+}
+.cardimg{
+    width: 85%;
+    margin: 0 auto;
+    padding: 15px 0 0 0;
+}
+.cardText{
+    text-align: center;
+    font-size: 28px;
+    line-height: 20px;
+    color: #1e9fb4;
+    padding: 15px 0 5px 0;
+}
+.cardText span{
+    color: #696969;
+    font-size: 20px;
+}
+.importLine{
+    width: 85%;
+    line-height: 20px;
+    margin: 20px auto 0 auto;
+    text-align: center;
+}
+.cardDis{
+    display: table;
+    margin: 18px auto 15px auto;
+    padding: 15px 15px 0 15px;
+    border-top: #c6c6c6 1px solid;
+    color: #696969;
+}
+.cardDis li{
+    line-height: 20px;
+    padding: 6px 0;
+    text-align: center;
+}
+.cardGo a{
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    margin: 15px;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+.cardGo a:first-child{
+    
+    background: #303345;
+    border-bottom: #000 2px solid;
+}
+.cardGo a:last-child{
+    background: #1e9fb4;
+    border-bottom: 2px solid #1e9fb4;
+}
+/* 主机特色 */
+.characteristic{
+    width: 100%;
+    background: #e2e2e2;
+    color: #696969;
+    padding: 35px 0;
+}
+.describe{
+    width: 65%;
+    margin: 0 auto;
+    text-align: center;
+}
+.desTitle{
+    width: 100%;
+    font-size: 28px;
+    line-height: 15px;
+    margin: 0 0 25px 0;
+    color: #242738;
+    
+}
+.desTitle h2{
+    font-weight: 600;
+}
+.desCrd{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+.desCrdItem{
+    border-radius:5px;
+    width: 31%;
+    margin-bottom: 20px;
+    background: #fff;
+    border-right: #9a9a9a 1px solid;
+    border-bottom: #9a9a9a 1px solid;
+}
+.desCrdItem:hover{
+    transform:translateY(-10px);
+    transition-duration:1s;
+}
+.itemList{
+    padding: 15px;
+}
+.itemImg{
+    background: url(../img/index/featuresgrid-icon1.png) left top no-repeat;
+    padding: 0 0 0 50px;
+}
+.itemImg h3{
+    text-align: left;
+    text-transform: none;
+    margin: 0 0 10px 0;
+    color: #242738;
+    font-size: 18px;
+    font-weight: 800;
+}
+.itemImg p{
+    text-align: left;
+    margin: 0;
+}
+/* 公用 */
+.public{
+    width: 100%;
+}
+.installFoot{
+    width: 100%;
+    background: #fff;
+    padding: 50px 0;
+}
+.boxAll{
+    width:65%;
+    margin: 0 auto;
+    text-align: center;
+    color: #242738;
+ }
+.boxAll h1{
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.boxAll h2{
+    display: inline-block;
+    font-size: 21px;
+    color: #696969;
+    font-weight: 700;
+    padding-bottom: 40px;
+    border-bottom: #5C8886 1px solid;
+}
+.boxImg{
+    margin-top: 20px;
+}
+.boxImg:hover{
+    -webkit-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+    transition-duration:1s;
+}
+.installChose{
+    width: 100%;
+    background:url(../img/index/whychooseusbg.jpg) no-repeat fixed 0% 0% / cover transparent;
+    padding: 50px 0;
+    margin: 0 0 0 0;
+}
+.boxChose{
+    width: 65%;
+    color: #fff;
+    margin: 0 auto;
+    text-align: center;
+}
+.boxChose h1{
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.boxChose h2{
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 700;
+    padding-bottom: 40px;
+    border-bottom: #5C8886 1px solid;
+}
+.choseList{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.choseItem{
+    width: 23%;
+}
+.choseItem img{
+    margin: 0 auto 20px auto;
+}
+.choseItem h4{
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+    margin: 0 0 10px 0;
+}
+.choseItem:hover{
+    transform:translateY(-10px);
+    transition-duration:1s;
+}

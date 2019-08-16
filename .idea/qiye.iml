@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/vendor/bacon/bacon-qr-code" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/hooklife/thinkphp5-wechat" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/houdunwang/arr" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/houdunwang/config" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/houdunwang/cookie" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/houdunwang/crypt" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/houdunwang/curl" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/houdunwang/dir" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/houdunwang/qrcode" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/houdunwang/request" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/houdunwang/session" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/houdunwang/tool" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/houdunwang/wechat" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/houdunwang/xml" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/monolog/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/overtrue/chinese-calendar" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/overtrue/socialite" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/overtrue/wechat" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/pimple/pimple" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/http-foundation" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/psr-http-message-bridge" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/topthink/think-installer" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

@@ -1,0 +1,60 @@
+{include file="public:header" /}
+    <div class="main-wrap">
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i>
+                <a href="{:url('Index/index')}">首页</a><span class="crumb-step">&gt;</span><span>添加区域</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <form action="{$url}" method="post"  id="form" enctype="multipart/form-data">
+                    <ul class="admin_tab">
+                    <li><a class="active">分类管理</a></li>
+                    </ul>
+                    <div class="admin_tab_cont" style="display:block;">
+                    <table class="insert-tab" width="100%">
+                        <tbody>
+                        <input type="hidden" name="id" value="{$data.id}">
+                        <tr>
+                            <th>上级分类：</th>
+                            <td>
+                                <select name="pid" id="" class="common-text">
+                                    <option value="0">顶级分类</option>
+                                    {volist name="area_list" id="v"}
+                                        <option value="{$v.id}" {if condition="$v.id eq $data.pid"}selected{/if}>{$v._title}</option>
+                                    {/volist}
+                                </select>
+                            </td>
+                        </tr>
+                            <tr>
+                                <th>类别名称：</th>
+                                <td>
+                                    <input class="common-text" name="title" size="20" value="{$data.title}"  type="text">
+                                </td>
+                            </tr>
+                              <tr>
+                                <th>排序：</th>
+                                <td>
+                                    {if $data.sort != 0}
+                                        <input class="common-text"  name="sort" value="{$data.sort}" type="text">
+                                    {else/}
+                                        <input class="common-text"  name="sort" value="255" type="text">
+                                    {/if}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <input class="btn btn-primary btn6 mr10" value="提交" type="submit">
+                                    <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
+                                </td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--/main-->
+</body>
+</html>

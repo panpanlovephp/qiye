@@ -1,0 +1,83 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.login-tit {
+	width: 100%;
+	height: 210px;
+	text-align: center;
+	line-height: 210px;
+	background-image: url(../img/background-subpage.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.login-tit span {
+	font-size: 40px;
+	font-weight: bold;
+	color: white;
+}
+
+.login-main {
+	width: 100%;
+	height: auto;
+	background: #e2e2e2;
+}
+
+.zhanwei {
+	height: 20px;
+}
+
+.login_tab {
+	width: 65%;
+	height: 38px;
+	margin: auto;
+	background: #009688;
+}
+
+.layui-nav {
+	width: 100%;
+}
+
+.layui-nav-item {
+	height: 100%;
+	line-height: 100%;
+}
+
+.footer {
+	width: 100%;
+	height: 500px;
+	margin-top: -40px;
+	background: #00F7DE;
+}
+
+.login-formbox {
+	clear: both;
+	width: 65%;
+	height: 300px;
+	margin: 40px auto;
+}
+
+.login-formbox_box {
+	width: 90%;
+	height: auto;
+	margin: auto;
+}
+
+.layui-collapse {
+	width: 30%;
+	height: 46px;
+	float: left;
+}
+
+.formbox_box_item1 {
+	width: 60%;
+	height: auto;
+	float: right;
+}
+
+.layui-bg {
+	background: #1e9fb4;
+}

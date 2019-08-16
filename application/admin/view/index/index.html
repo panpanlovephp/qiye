@@ -1,0 +1,202 @@
+{include file="public/header"/}
+<div class="navbar navbar-default" id="navbar">
+    <script type="text/javascript">
+        try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+    </script>
+    <div class="navbar-container" id="navbar-container">
+        <div class="navbar-header pull-left">
+            <a href="#" class="navbar-brand">
+                <small>
+                    <img src="__PUBLIC__/admin/images/logo.png" width="470px">
+                </small>
+            </a>
+        </div>
+        <div class="navbar-header operating pull-left"></div>
+        <div class="navbar-header pull-right" role="navigation">
+            <ul class="nav ace-nav">
+                <li class="light-blue">
+                    <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                        <span  class="time"><em id="time"></em></span><span class="user-info"><small>欢迎光临,</small>{$go.username}</span>
+                        <i class="icon-caret-down"></i>
+                    </a>
+                    <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                        <li><a href="javascript:void(0)" name="Systems.html" title="系统设置" class="iframeurl"><i class="icon-cog"></i>网站设置</a></li>
+                        <li><a href="javascript:void(0)" name="{:url('/admin/administrator/')}{$Think.session.uid}" title="个人信息" class="iframeurl"><i class="icon-user"></i>个人资料</a></li>
+                        <li class="divider"></li>
+                        <li><a href="{:url('Common/logout')}" id="Exit_system"><i class="icon-off"></i>退出</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+    </script>
+    <div class="main-container-inner">
+        <a class="menu-toggler" id="menu-toggler" href="#">
+            <span class="menu-text"></span>
+        </a>
+        <div class="sidebar" id="sidebar">
+            <script type="text/javascript">
+                try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+            </script>
+            <div class="sidebar-shortcuts" id="sidebar-shortcuts">
+                <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+                    <a class="btn btn-success">
+                        <i class="icon-signal"></i>
+                    </a>
+
+                    <a class="btn btn-info">
+                        <i class="icon-pencil"></i>
+                    </a>
+
+                    <a class="btn btn-warning">
+                        <i class="icon-group"></i>
+                    </a>
+
+                    <a class="btn btn-danger">
+                        <i class="icon-cogs"></i>
+                    </a>
+                </div>
+
+                <div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+                    <span class="btn btn-success"></span>
+
+                    <span class="btn btn-info"></span>
+
+                    <span class="btn btn-warning"></span>
+
+                    <span class="btn btn-danger"></span>
+                </div>
+            </div><!-- #sidebar-shortcuts -->
+            <div id="menu_style" class="menu_style">
+                <ul class="nav nav-list" id="nav_list">
+                    <li class="home"><a href="javascript:void(0)" name="{:url('/admin/index/home')}" class="iframeurl" title=""><i class="icon-home"></i><span class="menu-text"> 系统首页 </span></a></li>
+                    <li><a href="#" class="dropdown-toggle"><i class="icon-desktop"></i><span class="menu-text"> 信息管理 </span><b class="arrow icon-angle-down"></b></a>
+                    <ul class="submenu">
+                        <li class="home"><a href="javascript:void(0)" name="{:url('Category/index')}" title="分类信息"  class="iframeurl"><i class="icon-double-angle-right"></i>分类信息</a></li>
+                        <li class="home"><a  href="javascript:void(0)" name="{:url('Product/index')}"  title="信息列表" class="iframeurl"><i class="icon-double-angle-right"></i>信息列表</a></li>
+                    </ul>
+                   </li>
+
+<!--                    <li><a href="#" class="dropdown-toggle"><i class="icon-desktop"></i><span class="menu-text">热门推荐 </span><b class="arrow icon-angle-down"></b></a>-->
+<!--                        <ul class="submenu">-->
+<!--                            <li class="home"><a  href="javascript:void(0)" name="{:url('Recommend/prolist')}"  title="推荐信息" class="iframeurl"><i class="icon-double-angle-right"></i>推荐信息</a></li>-->
+<!--                            <li class="home"><a  href="javascript:void(0)" name="{:url('Recommend/index')}"  title="信息列表" class="iframeurl"><i class="icon-double-angle-right"></i>信息列表</a></li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
+                    <li><a href="#" class="dropdown-toggle"><i class="icon-bookmark"></i><span class="menu-text"> 企业介绍 </span><b class="arrow icon-angle-down"></b></a>
+                        <ul class="submenu">
+                            <li class="home"><a href="javascript:void(0)" name="{:url('Area/index')}" title="单页面管理" class="iframeurl"><i class="icon-double-angle-right"></i>单页面管理</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle"><i class="icon-list"></i><span class="menu-text"> 其他管理 </span><b class="arrow icon-angle-down"></b></a>
+                        <ul class="submenu">
+                            <li class="home"><a href="javascript:void(0)" name="{:url('Banner/index')}" title="首页Banner"  class="iframeurl"><i class="icon-double-angle-right"></i>首页Banner</a></li>
+                            <li class="home"><a href="javascript:void(0)" name="{:url('Message/index')}" title="加入我们"  class="iframeurl"><i class="icon-double-angle-right"></i>加入我们</a></li>
+                            <li class="home"><a href="javascript:void(0)" name="{:url('Order/index')}" title="全部订单"  class="iframeurl"><i class="icon-double-angle-right"></i>全部订单</a></li>
+                            <li class="home"><a href="javascript:void(0)" name="{:url('Notice/index')}" title="公告信息"  class="iframeurl"><i class="icon-double-angle-right"></i>公告信息</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="dropdown-toggle"><i class="icon-cogs"></i><span class="menu-text"> 系统管理 </span><b class="arrow icon-angle-down"></b></a>
+                        <ul class="submenu">
+                            <li class="home"><a href="javascript:void(0)" name="{:url('Systems/index')}" title="系统设置" class="iframeurl"><i class="icon-double-angle-right"></i>系统设置</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="dropdown-toggle"><i class="icon-group"></i><span class="menu-text"> 管理员管理 </span><b class="arrow icon-angle-down"></b></a>
+                        <ul class="submenu">
+                            <li class="home"><a href="javascript:void(0)" name="{:url('admin/index')}" title="管理员列表" class="iframeurl"><i class="icon-double-angle-right"></i>管理员列表</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <script type="text/javascript">
+                $("#menu_style").niceScroll({
+                    cursorcolor:"#888888",
+                    cursoropacitymax:1,
+                    touchbehavior:false,
+                    cursorwidth:"5px",
+                    cursorborder:"0",
+                    cursorborderradius:"5px"
+                });
+            </script>
+            <div class="sidebar-collapse" id="sidebar-collapse">
+                <i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+            </div>
+            <script type="text/javascript">
+                try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+            </script>
+        </div>
+
+        <div class="main-content">
+            <script type="text/javascript">
+                try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+            </script>
+            <div class="breadcrumbs" id="breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="icon-home home-icon"></i>
+                        <a href="index.html">首页</a>
+                    </li>
+                    <li class="active"><span class="Current_page iframeurl"></span></li>
+                    <li class="active" id="parentIframe"><span class="parentIframe iframeurl"></span></li>
+                    <li class="active" id="parentIfour"><span class="parentIfour iframeurl"></span></li>
+                </ul>
+            </div>
+
+            <iframe id="iframe" style="border:0; width:100%; background-color:#FFF;"name="iframe" frameborder="0" src="{:url('/admin/index/home')}">  </iframe>
+
+        </div>
+
+        <div class="ace-settings-container" id="ace-settings-container">
+            <div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
+                <i class="icon-cog bigger-150"></i>
+            </div>
+
+            <div class="ace-settings-box" id="ace-settings-box">
+                <div>
+                    <div class="pull-left">
+                        <select id="skin-colorpicker" class="hide">
+                            <option data-skin="default" value="#438EB9">#438EB9</option>
+                            <option data-skin="skin-1" value="#222A2D">#222A2D</option>
+                            <option data-skin="skin-2" value="#C6487E">#C6487E</option>
+                            <option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
+                        </select>
+                    </div>
+                    <span>&nbsp; 选择皮肤</span>
+                </div>
+
+                <div>
+                    <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-sidebar" />
+                    <label class="lbl" for="ace-settings-sidebar"> 固定滑动条</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-rtl" />
+                    <label class="lbl" for="ace-settings-rtl">切换到左边</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-add-container" />
+                    <label class="lbl" for="ace-settings-add-container">
+                        切换窄屏
+                        <b></b>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--底部样式-->
+<div class="footer_style" id="footerstyle">
+    <script type="text/javascript">try{ace.settings.check('footerstyle' , 'fixed')}catch(e){}</script>
+    <p class="l_f"></p>
+    <p class="r_f"></p>
+</div>
+
+
+

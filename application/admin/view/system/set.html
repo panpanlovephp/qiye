@@ -1,0 +1,83 @@
+{include file="public:header" /}
+<div class="main-wrap">
+
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="{:url('Index/index')}">首页</a><span class="crumb-step">&gt;</span><span>系统设置</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <form action="{:url('System/set')}" method="post" id="myform" name="myform" enctype="multipart/form-data">
+                    <table class="insert-tab" width="100%">
+                        <tbody>
+                        <tr>
+                            <th>上班提前打卡有效时间（分钟）：</th>
+                            <td>
+                                <input class="common-text" name="start_fw" style=" width:800px;" value="{$detail.start_fw}" type="text">
+                            </td>
+                        </tr>
+                           <tr>
+                               <th>上班时间：</th>
+                                <td>
+                                    <input class="common-text" name="start_time" style=" width:800px;" value="{$detail.start_time}" type="text">
+                                </td>
+                           </tr>
+                           <tr>
+                               <th>下班时间：</th>
+                               <td>
+                                   <input class="common-text" name="end_time" style=" width:800px;" value="{$detail.end_time}" type="text">
+                               </td>
+                           </tr>
+
+                           <tr>
+                               <th>打卡地理位置  定位请从微信获取：</th>
+                               <td>
+                                   <input class="common-text" name="gps" style=" width:800px;" value="{$detail.gps}" type="text">
+                               </td>
+                           </tr>
+
+                           <tr>
+                               <th>打卡有效距离</th>
+                               <td>
+                                   <input class="common-text" name="max_juli" style=" width:800px;" value="{$detail.max_juli}" type="text">
+                               </td>
+                           </tr>
+
+                            <!--<tr>-->
+                                <!--<th>网站标题：</th>-->
+                                <!--<td>-->
+                                    <!--<input class="common-text" id="title" name="title" style=" width:800px;" value="{$detail.title}" type="text">-->
+                                <!--</td>-->
+                            <!--</tr>-->
+                           <!--<tr>-->
+                                <!--<th>网站关键词：</th>-->
+                                <!--<td>-->
+                                    <!--<input class="common-text" id="keywords" name="keywords" style=" width:800px;" value="{$detail.keywords}" type="text">-->
+                                <!--</td>-->
+                            <!--</tr>-->
+                           <!---->
+                            <!--<tr>-->
+                                <!--<th>网站描述：</th>-->
+                                <!--<td><textarea name="description" class="common-textarea" id="description" style="width:800px; height:200px" >{$detail.description}</textarea></td>-->
+                            <!--</tr>-->
+                            <!--<tr>-->
+                             <!--<tr>-->
+                                <!--<th>生成缩略图：</th>-->
+                                <!--<td><input type="checkbox" name="isthumb" value="1" {if condition="$detail['isthumb'] eq 1"}checked="checked"{/if} />开启&nbsp;宽度：<input type="text" class="common-text" name="width" value="{$detail.width}" style="width:100px;" />高度：<input type="text" class="common-text" name="height" value="{$detail.height}" style="width:100px; " /></td>-->
+                            <!--</tr>-->
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input class="btn btn-primary btn6 mr10"  value="提交" type="submit">
+                                    <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!--/main-->
+</div>
+</body>
+</html>

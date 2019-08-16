@@ -1,0 +1,47 @@
+{include file="public:header" /}
+<div class="main-wrap">
+
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="{:url('Index/index')}">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">栏目管理</span></div>
+        </div>
+       
+        <div class="result-wrap">
+                <div class="result-title">
+                       <div class="result-list">
+                        <a  href="{:url('add')}"><i class="icon-font"></i>添加</a>
+                       </div>
+                </div>
+                <div class="result-content">
+                    <table class="result-tab" width="50%" >
+                        <tr>
+                            <td align="center" width="80">排序</td>
+                            <td style="text-align: left;">名称</td>
+                            <td align="center" width="200">操作</td>
+                        </tr>
+                        {volist name='area_list' id='v'}
+                        <tr style="text-align: center">
+                            {if $v.pid==0}
+                            <td><b>{$v.sort}</b></td>
+                            {else}
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;└─{$v.sort}</td>
+                            {/if}
+                            {if $v.pid==0}
+                            <td style="text-align: left;"><b>{$v._title}</b></td>
+                            {else}
+                            <td style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;{$v._title}</td>
+                            {/if}
+                            <td>
+                                <a class="btn btn-w-m btn-info" href="{:url('edit')}?id={$v.id}">修改</a>
+                                <a class="btn btn-w-m btn-danger" href="{:url('delete')}?id={$v.id}">删除</a>
+                            </td>
+                        </tr>
+                        {/volist}
+                    </table>
+                </div>
+            
+        </div>
+    </div>
+    
+</div>
+</body>
+</html>
