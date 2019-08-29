@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/header.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/lib/layui/css/layui.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/zhuce.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/company.css" />
+    <script type="text/javascript" src="__PUBLIC__/home/js/header/header.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/home/lib/layui/layui.all.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="css/metahead.css"/> -->
+    <link rel="stylesheet" href="__PUBLIC__/home/css/bootstrap.min.css">
+    <script src="__PUBLIC__/home/js/footer/bootstrap.min.js"></script>
+    <style>
+        * {
+            list-style: none;
+            margin: 0;
+            outline: none;
+            padding: 0;
+        }
+
+        footer {
+            width: 100%;
+            clear: both;
+            font-size: 1.2em;
+            color: #9ca0b4;
+        }
+
+        .footerinner {
+            background-color: #242738;
+            padding: 35px 0 35px 0;
+        }
+
+        .footercontent {
+            margin: 0 auto;
+            max-width: 1250px;
+            width: 90%;
+        }
+
+        .col-md-3 {
+            border-right: 1px solid gray
+        }
+
+        h4 {
+            margin: 0 0 10px 0;
+            padding: 0 0 10px 0;
+            color: #fffefe;
+            font-size: 1.7em;
+            text-shadow: none;
+            text-transform: none;
+        }
+
+        a {
+            padding: 3px 0 3px 20px;
+            line-height: 27px;
+            text-decoration: none;
+            display: block;
+            color: #9ca0b4;
+        }
+
+        .footerbar {
+            background: #1C1F2D;
+            margin: 0 0 0px 0;
+            padding: 30px 0;
+        }
+
+        .footerbarinner {
+            margin: 0 auto;
+            max-width: 1250px;
+            width: 90%;
+        }
+
+        .footer>.footerbar>ul>li {
+            float: left;
+            width: 33.33%;
+            padding: 0 20px;
+            line-height: 1.2em;
+            padding-left: 70px;
+            min-height: 52px;
+            display: block;
+        }
+
+        .copyright {
+            line-height: 1.7em;
+            font-size: 0.8em;
+            padding: 25px 0 30px 0;
+            clear: both;
+            background-color: #242738;
+        }
+
+        .copyrightinner {
+            margin: 0 auto;
+            max-width: 1250px;
+            width: 90%;
+        }
+
+        .footer .copyright p {
+            line-height: 1;
+            margin: 0;
+            text-align: center;
+        }
+
+        .footer .copyright a {
+            padding: 0 10px;
+            border-left: #777 1px solid;
+            line-height: 1.7em;
+            color: #9ca0b4;
+            text-decoration: underline;
+        }
+
+        .copyright p {
+            line-height: 1;
+            margin: 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    {include file="user/top"/}
+    <!-- <div id="public_header"></div> -->
+    <div class="login-tit">
+        <span>{$title}</span>
+    </div>
+
+
+    <!-- 主体 -->
+
+    <div class="company-main">
+        <div class="company-main-box">
+            <div class="company-main-left">
+                <div class="company-txt" style="text-align:left;padding:0 10px;">
+                    <p>{$content}</p>
+                </div>
+                <div class="company-txt2">
+                    <div class="company-txt2-1">
+                        <div class="yu">
+                            <span>免费域名服务</span>
+                        </div>
+                        <p>当您购买年付及以上的虚拟主机套餐时，我们将提供一个免费注册/免费转移的域名。主机使用期间域名将享受永久免费。</p>
+                        <div class="yu">
+                            <span>免费域名服务</span>
+                        </div>
+                        <p>当您购买年付及以上的虚拟主机套餐时，我们将提供一个免费注册/免费转移的域名。主机使用期间域名将享受永久免费。</p>
+                    </div>
+                    <div class="company-img">
+                        <img src="__PUBLIC__/home/img/header/loginbg.jpg" />
+                    </div>
+                </div>
+                {volist name="text" id="v"}
+                <div class="company-txt3">
+                    <div class="mu">
+                        <span>{$v.comTitle}</span>
+                    </div>
+                    <p>{$v.comText}</p>
+                </div>
+                {/volist}
+            </div>
+            <div class="company-main-right">
+                <div class="main-right">
+                    <div class="main-right-box">
+                        <div class="mright-box-tit">
+                            <span>为什么选择我们?</span>
+                        </div>
+                        <div class="mright-box-txt">
+                            <p>你应该选择我们的首要原因.</p>
+                        </div>
+                        <div class="mright-box-txt">
+                            <img src="__PUBLIC__/home/img/header/checkmark.png" /><span>&nbsp;我们对自己的工作充满激情</span><br />
+                            <img src="__PUBLIC__/home/img/header/checkmark.png" /><span>&nbsp;我们对自己的工作充满激情</span><br />
+                            <img src="__PUBLIC__/home/img/header/checkmark.png" /><span>&nbsp;我们对自己的工作充满激情</span><br />
+                            <img src="__PUBLIC__/home/img/header/checkmark.png" /><span>&nbsp;我们对自己的工作充满激情</span><br />
+                        </div>
+                    </div>
+                    <div class="main-right-box">
+                        <div class="mright-box-tit">
+                            <span>为什么选择我们?</span>
+                        </div>
+                        <div class="mright-box-txt">
+                            <p>你应该选择我们的首要原因.</p>
+                        </div>
+                        <div class="mright-box-txt">
+                            <img src="__PUBLIC__/home/img/header/checkmark.png" /><span>&nbsp;我们对自己的工作充满激情</span><br />
+                            <img src="__PUBLIC__/home/img/header/checkmark.png" /><span>&nbsp;我们对自己的工作充满激情</span><br />
+                            <img src="__PUBLIC__/home/img/header/checkmark.png" /><span>&nbsp;我们对自己的工作充满激情</span><br />
+                            <img src="__PUBLIC__/home/img/header/checkmark.png" /><span>&nbsp;我们对自己的工作充满激情</span><br />
+                        </div>
+                    </div>
+                    <div class="main-right-box">
+                        <div class="mright-box-tit">
+                            <span>为什么选择我们?</span>
+                        </div>
+                        <div class="mright-box-txt">
+                            <p>你应该选择我们的首要原因.</p>
+                        </div>
+                        <div class="mright-box-txt">
+                            <img src="__PUBLIC__/home/img/header/checkmark.png" /><span>&nbsp;我们对自己的工作充满激情</span><br />
+                            <img src="__PUBLIC__/home/img/header/checkmark.png" /><span>&nbsp;我们对自己的工作充满激情</span><br />
+                            <img src="__PUBLIC__/home/img/header/checkmark.png" /><span>&nbsp;我们对自己的工作充满激情</span><br />
+                            <img src="__PUBLIC__/home/img/header/checkmark.png" /><span>&nbsp;我们对自己的工作充满激情</span><br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 尾部 -->
+    {include file="user/foot"/}
+
+    <script src="__PUBLIC__/home/lib/layui/layui.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/home/js/header/jquery.js"></script>
+    <script src="__PUBLIC__/home/js/header/header.js"></script>
+    <script>
+        //注意：导航 依赖 element 模块，否则无法进行功能性操作
+        layui.use('element', function () {
+            var element = layui.element;
+        });
+        //form表单
+        layui.use('form', function () {
+            var form = layui.form;
+
+            //监听提交
+            form.on('submit(formDemo)', function (data) {
+                layer.msg(JSON.stringify(data.field));
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>

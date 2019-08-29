@@ -14,7 +14,5 @@ class Area extends Model
         $arr =  \houdunwang\arr\Arr::tree($list, 'title', $fieldPri = 'id', $fieldPid = 'pid');
         return $arr;
 	}
-	
-	
-	
+
 }

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:73:"D:\phpStudy\PHPTutorial\WWW\qiye/application/admin\view\notice\index.html";i:1565924337;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:73:"D:\phpStudy\PHPTutorial\WWW\qiye/application/admin\view\notice\index.html";i:1566089704;}*/ ?>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -42,8 +42,8 @@
                     <thead>
                     <tr>
                         <th width="80px">ID</th>
-                        <th align="center" width="550px">名称</th>
-                        <th align="center">类别</th>
+                        <th align="center" width="550px">标题</th>
+                        <th align="center">发布人</th>
                         <th align="center">浏览量</th>
                         <th align="center">是否展示</th>
                         <th align="center">发布时间</th>

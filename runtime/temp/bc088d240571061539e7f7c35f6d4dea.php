@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"D:\phpStudy\PHPTutorial\WWW\qiye/application/admin\view\admin\index.html";i:1505467744;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"D:\phpStudy\PHPTutorial\WWW\qiye/application/admin\view\admin\index.html";i:1566539014;}*/ ?>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -55,8 +55,8 @@
                         <tr align="center" id="tr_<?php echo $v['id']; ?>">
                             <td><?php echo $v['id']; ?></td>
                             <td><?php echo $v['username']; ?></td>
-                            <td><?php if($v['id'] == 1): ?>总管理员<?php endif; ?></td>
-                            <td><?php echo getTime($v['lasttime']); ?></td>
+                            <td><?php if($v['qx_type'] == 0): ?>总管理员<?php endif; ?></td>
+                            <td><?php echo $v['lasttime']; ?></td>
                             <td><?php echo $v['lastip']; ?></td>
                             <td>
                                 <!--<?php if($v['id'] == 1): ?>-->

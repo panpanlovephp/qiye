@@ -3,6 +3,21 @@
 	padding: 0;
 }
 
+.login-tit {
+	width: 100%;
+	height: 210px;
+	text-align: center;
+	line-height: 210px;
+	background-image: url(../img/background-subpage.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+.login-tit span {
+	font-size: 40px;
+	font-weight: bold;
+	color: white;
+}
 .Host-mainbox {
 	width: 100%;
 	height: auto;
@@ -154,6 +169,7 @@
 .list2-box {
 	width: 100%;
 	height: 50px;
+	line-height: 50px;
 	text-align: center;
 	border-radius: 5px;
 	background: #E0E0E0;
@@ -165,6 +181,8 @@
 }
 
 .list2-box>h2 {
+	display: block;
+	margin: 10px auto;
 	font-weight: 700;
 	font-size: 25px;
 }
@@ -218,14 +236,14 @@
 	border-radius: 5px;
 	background: #E0E0E0;
 	border-bottom: #000 2px solid;
-	display: block;
 	line-height: 40px;
 	overflow: hidden;
-	/* margin: 10px 0 5px 0; */
 	margin-top: 10px;
 	box-sizing: border-box;
 }
 .list2-box2>h2 {
+	margin: 10px auto !important;
+	display: block;
 	color: rgb(36,39,55);
 	font-weight: 700;
 	font-size: 22.5px;
@@ -236,7 +254,7 @@
 	height: 12px;
 	padding-top: 25px;
 	margin: auto;
-	background: url(../img/cross.png) no-repeat center;
+	background: url(../img/header/cross.png) no-repeat center;
 }
 .checked{
 	display: block;
@@ -244,13 +262,15 @@
 	height: 12px;
 	padding-top: 25px;
 	margin: auto;
-	background: url(../img/checkmark.png) no-repeat center!important;
+	background: url(../img/header/checkmark.png) no-repeat center!important;
 }
 .newname{
+	line-height: 50px;
 	background: #1e9fb4;
 	color: rgb(255,255,255);
 }
 .newname>h2{
+	display: block;
 	color: rgb(255,255,255);
 	font-weight: 700;
 }

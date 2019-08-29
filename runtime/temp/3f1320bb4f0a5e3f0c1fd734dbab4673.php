@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"D:\phpStudy\PHPTutorial\WWW\qiye/application/admin\view\product\add.html";i:1565856095;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"D:\phpStudy\PHPTutorial\WWW\qiye/application/admin\view\product\add.html";i:1566462374;}*/ ?>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -74,12 +74,13 @@
                     </select>
                 </div>
             </div>
-            <?php if($sid==13): ?>
-            <div class="clearfix cl">
-                <label class="form-label col-2">会员职位：</label>
-                <div class="formControls col-10"><input type="text" class="input-text" value="<?php echo $data['work']; ?>" placeholder="职位简介" name="work"></div>
-            </div>
-            <?php endif; if($pid!=4&&$pid!=5&&$pid!=7): ?>
+<!--            <?php if($sid==13): ?>-->
+<!--            <div class="clearfix cl">-->
+<!--                <label class="form-label col-2">会员职位：</label>-->
+<!--                <div class="formControls col-10"><input type="text" class="input-text" value="<?php echo $data['work']; ?>" placeholder="职位简介" name="work"></div>-->
+<!--            </div>-->
+<!--            <?php endif; ?>-->
+            <?php if($pid!=4&&$pid!=5&&$pid!=35): ?>
             <div class=" clearfix cl">
                 <label class="form-label col-2">链接：</label>
                 <div class="formControls col-10"><input type="text" class="input-text" value="<?php echo $data['lian']; ?>" placeholder="请输入链接" name="remark"></div>
@@ -97,7 +98,7 @@
             <label class="form-label col-2">视频地址：</label>
             <div class="formControls col-10"><input type="text" class="input-text" value="<?php echo $data['lian']; ?>" placeholder="视频连接地址" name="lian"></div>
             </div>
-            <?php endif; if($pid!=4&&$pid!=5&&$pid!=7): ?>
+            <?php endif; if($pid!=4&&$pid!=5&&$pid!=35): ?>
             <div class="clearfix cl">
                 <label class="form-label col-2">详细内容：</label>
                 <div class="formControls col-10">
@@ -155,24 +156,24 @@
             <div class="clearfix cl">
                 <label class="form-label col-2"><span class="c-red"></span>电子商务功能：</label>
                 <div class="formControls col-10">
-                    <input type="text" class="input-text"  style="width:45%;" value="<?php echo $data['caseInfo']; ?>" placeholder="请填写标题信息，每个信息之间用||分隔" name="caseInfo">
-                    <input type="text" class="input-text" style="width:45%;" value="<?php echo $data['info']; ?>" placeholder="请填写具体信息，每个信息之间用||分隔" name="info">
+                    <input type="text" class="input-text"  style="width:45%;" value="<?php echo $data['busFunc']; ?>" placeholder="请填写标题信息，每个信息之间用||分隔" name="busFunc">
+                    <input type="text" class="input-text" style="width:45%;" value="<?php echo $data['busFuncVal']; ?>" placeholder="请填写具体信息，每个信息之间用||分隔" name="busFuncVal">
                 </div>
             </div>
 
             <div class="clearfix cl">
                 <label class="form-label col-2"><span class="c-red"></span>支持功能：</label>
                 <div class="formControls col-10">
-                    <input type="text" class="input-text"  style="width:45%;" value="<?php echo $data['caseInfo']; ?>" placeholder="请填写标题信息，每个信息之间用||分隔" name="caseInfo">
-                    <input type="text" class="input-text" style="width:45%;" value="<?php echo $data['info']; ?>" placeholder="请填写具体信息，每个信息之间用||分隔" name="info">
+                    <input type="text" class="input-text"  style="width:45%;" value="<?php echo $data['supFunc']; ?>" placeholder="请填写标题信息，每个信息之间用||分隔" name="supFunc">
+                    <input type="text" class="input-text" style="width:45%;" value="<?php echo $data['supFuncVal']; ?>" placeholder="请填写具体信息，每个信息之间用||分隔" name="supFuncVal">
                 </div>
             </div>
 
             <div class="clearfix cl">
                 <label class="form-label col-2"><span class="c-red"></span>定价&订购：</label>
                 <div class="formControls col-10">
-                    <input type="text" class="input-text"  style="width:45%;" value="<?php echo $data['caseInfo']; ?>" placeholder="请填写标题信息，每个信息之间用||分隔" name="caseInfo">
-                    <input type="text" class="input-text" style="width:45%;" value="<?php echo $data['info']; ?>" placeholder="请填写具体信息，每个信息之间用||分隔" name="info">
+                    <input type="text" class="input-text"  style="width:45%;" value="<?php echo $data['priceTitle']; ?>" placeholder="请填写标题信息，每个信息之间用||分隔" name="priceTitle">
+                    <input type="text" class="input-text" style="width:45%;" value="<?php echo $data['price']; ?>" placeholder="请填写具体信息，每个信息之间用||分隔" name="price">
                 </div>
             </div>
 
@@ -191,13 +192,14 @@
             <div class="clearfix cl">
                 <label class="form-label col-2"><span class="c-red"></span>套餐价格：</label>
                 <div class="formControls col-10">
-                    <input type="text" class="input-text" value="<?php echo $data['packPri']; ?>" placeholder="请填写套餐名称" name="packPri"></div>
+                    <input type="text" class="input-text" value="<?php echo $data['price']; ?>" placeholder="请填写套餐价格" name="price"></div>
             </div>
             <div class="clearfix cl">
                 <label class="form-label col-2"><span class="c-red"></span>套餐信息：</label>
                 <div class="formControls col-10">
-                    <input type="text" class="input-text" value="<?php echo $data['packInfo']; ?>" placeholder="请填写套餐信息,每个信息之间用||分隔" name="packInfo"></div>
-            </div>
+                    <input type="text" class="input-text" style="width:45%;"  value="<?php echo $data['packInfo']; ?>" placeholder="请填写套餐简介,每个信息之间用||分隔" name="packInfo">
+                    <input type="text" class="input-text"  style="width:45%;"  value="<?php echo $data['packVal']; ?>" placeholder="请填写套餐信息,每个信息之间用||分隔" name="packVal"></div>
+    </div>
             <div class="clearfix cl">
                 <label class="form-label col-2"><span class="c-red"></span>服务器特色：</label>
                 <div class="formControls col-10">
@@ -205,7 +207,7 @@
                     <input type="text" class="input-text" style="width:45%;" value="<?php echo $data['serText']; ?>" placeholder="请填写具体信息，每个信息之间用||分隔" name="serText">
                 </div>
             </div>
-            <?php endif; if($pid==7): ?>
+            <?php endif; if($pid==35): ?>
             <div class="clearfix cl">
                 <label class="form-label col-2">公司简介：</label>
                 <div class="formControls col-10">

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/lib/layui/css/layui.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/denglv.css"/>
+    <script type="text/javascript" src="__PUBLIC__/home/js/jquery.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/home/js/header.js"></script>
+</head>
+<body>
+<div class="login-window" style="position:absolute;background-color:lightgrey;border-radius:20px;">
+    <div class="login-box" style="position:relative;left:34%;top:20%;background-color:#fff;width:30%;height:260px;padding:75px 0px 0px 7px;">
+        <!-- 登录表单 -->
+        <form class="layui-form" method="post" action="http://127.0.0.3/user.php/Login/check">
+            <div class="layui-form-item">
+                <label class="layui-form-label">用户名</label>
+                <div class="layui-input-block yhm-class" style="margin-top:10px;">
+                    <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">密码</label>
+                <div class="layui-input-inline pwd-class">
+                    <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off"
+                           class="layui-input">
+                </div>
+                <div class="layui-form-mid layui-word-aux">请输入6位以上数字字母混合密码</div>
+            </div>
+            <div class="layui-form-item login-btn">
+                <div class="layui-input-block" style="margin-left:34%;">
+                    <button class="layui-btn" type="submit">登录</button>
+                    <button type="reset" class="layui-btn layui-btn-primary" onclick="zhuce()">注册</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="__PUBLIC__/home/lib/layui/layui.js"></script>
+<script>
+    //注意：导航 依赖 element 模块，否则无法进行功能性操作
+    layui.use('element', function() {
+        var element = layui.element;
+    });
+    //form表单
+    layui.use('form', function(){
+        var form = layui.form;
+
+        //监听提交
+        form.on('submit(formDemo)', function(data){
+            layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+    });
+    function zhuce(){
+        parent.location.href="http://127.0.0.3/user.php/Register/index";
+    }
+</script>
+</body>
+</html>

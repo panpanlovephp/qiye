@@ -1,0 +1,157 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.bigpay{
+    width: 80%;
+    height: 200px;
+    margin: auto;
+    margin-top: 20px;
+}
+.pay{
+    width: 30%;
+    height: 200px;
+    border: 1px solid rgb(118, 118, 119);
+    border-radius: 5px;
+}
+.pay>h2{
+    width:30%;
+    display: block;
+    text-align: center;
+    margin-left: 25px;
+    margin-top: 10px;
+    font-size: 35px;
+    height: 70px;
+    color: rgb(118, 118, 119);
+    border-bottom: 1px solid rgb(118, 118, 119);
+}   
+.pay>p{
+    color: rgb(118, 118, 119);
+    margin: 30px 0px 0px 30px;
+}
+.des{
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    border: 1px solid rgb(118, 118, 119);
+    overflow: hidden;
+}
+.des-top{
+    text-align: center;
+    font-weight: 600;
+    color: #333;
+}
+.des-top>p{
+    width:120px;
+    float: right;
+}
+.des-top>span{
+    font-size: 20px;
+    color: #f00;
+
+}
+.backs{
+    background-color: rgb(239, 239, 239);
+}
+.des-l{
+    width: 70%;
+    float: left;
+    padding: 5px 0px 5px 0px;
+    box-sizing: border-box;
+    border-right: 1px solid rgb(118, 118, 119);
+    border-bottom: 1px solid rgb(118, 118, 119);
+}
+.des-r{
+    width: 29.98%;
+    float: right;
+    padding: 5px 0px 5px 0px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(118, 118, 119);
+}
+.tfont{
+    padding-left: 10px;
+}
+.date{
+    width: 80%;
+    margin:auto;
+    margin-top: 25px;
+    border: 1px solid rgb(118, 118, 119);
+    overflow: hidden;
+}
+.tra{
+    width: 24.9%;
+    float: left;
+    padding: 5px 0px 5px 0px;
+    background-color: rgb(239, 239, 239);
+    text-align: center;
+    font-weight: 600;
+    color: #333;
+    border-left: 1px solid rgb(118, 118, 119);
+}
+.ya{
+    width: 80%;
+    margin: auto;
+    padding: 5px 0px 5px 0px;
+    color: #333;
+    text-align: center;
+    border-left: 1px solid rgb(118, 118, 119);
+    border-right: 1px solid rgb(118, 118, 119);
+}
+.big{
+    width: 80%;
+    margin: auto;
+    border: 1px solid rgb(118, 118, 119);
+    overflow: hidden;
+}
+.ground{
+    background-color: rgb(239, 239, 239);
+    text-align: center;
+    font-weight: 600;
+    color: #333;
+}
+.ground>p{
+    width:120px;
+    float: right;
+}
+.gro-l{
+    width: 70%;
+    float: left;
+    padding: 5px 0px 5px 0px;
+    box-sizing: border-box;
+    border-right: 1px solid rgb(118, 118, 119);
+}
+.gro-r{
+    width: 29.98%;
+    float: right;
+    padding: 5px 0px 5px 0px;
+    box-sizing: border-box;
+}
+.sallm{
+    width: 80%;
+    margin: 30px auto;
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+}
+.balace{
+    width: 80%;
+    height: 50px;
+    margin: auto;
+}
+.balace-btn{
+    background-color: rgb(239, 239, 239);
+    width: 10%;
+    height: 30px;
+    float: right;
+    text-align: center;
+    line-height: 30px;
+    color: #333;
+    border: 1px solid rgb(118, 118, 119);
+    border-radius: 5px;
+}

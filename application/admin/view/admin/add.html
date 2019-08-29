@@ -49,9 +49,18 @@
                             <input type="password" class="input-text" placeholder="请填写密码" name="password"></div>
                     </div>
                     <div class="clearfix cl">
+                        <label class="form-label col-2"><span class="c-red">*</span>职 位：</label>
+                        <div class="formControls col-10">
+                            <select name="admin" >
+                                <option value="0">超级管理员</option>
+                                <option value="1">管理员</option>
+                            </select>
+                        </div>
+                        </div>
+                    <div class="clearfix cl">
                         <div class="Button_operation">
                             <button onClick="article_save_submit();" class="btn btn-primary radius" type="submit"><i class="icon-save "></i>保存</button>
-                            <button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+                            <button onClick="layer_close();" class="btn btn-default radius" type="button">取消</button>
                         </div>
                     </div>
                 </form>

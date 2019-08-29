@@ -3,9 +3,7 @@ namespace app\admin\controller;
 use think\Controller;
 use think\Db;
 class Index extends Common
-{   
-    
-    
+{
     public function index()
     {
 		$go = db('admin')->where('id', session('admin_id'))->find();

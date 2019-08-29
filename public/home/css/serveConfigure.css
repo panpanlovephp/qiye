@@ -1,0 +1,86 @@
+*{
+    padding: 0;margin: 0;
+}
+li{list-style: none;}
+a{text-decoration: none; }
+.box:after{
+    clear: both;
+    content: '';
+    display: block;
+}
+p{margin: 0;}
+
+/*  */
+.cofgAll{
+    width: 100%;
+    background: #e2e2e2;
+    min-height: 626px;
+}
+.cofg{
+    width: 65%;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+.cofgTitle{
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+}
+.cofgTitle p{
+    font-size: 15px;
+    text-align: left;
+    color: #696969;
+    margin: 10px 0;
+}
+.product{
+    margin:10px 0;
+    padding: 10px;
+    background-color: #F5F5F5;
+    border: 3px solid #EBEBEB;
+    line-height: 20px;
+    text-align: left;
+    font-size: 15px;
+    color: #696969;
+}
+.choseCofg{
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    color: #696969;
+    margin: 0 0 10px 0;
+    background-color: #F5F5F5;
+    border: 3px solid #EBEBEB;
+    line-height: 20px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;
+}
+.fieldlabel{
+    width: 160px;
+    text-align: left;
+}
+td{
+    margin: 0 left;
+    padding: 7px;
+}
+select{
+    width: 100%;
+}
+.btnImp{
+    display: inline-block;
+    width: 140px;
+    height: 40px;
+    text-align: center;
+    padding: 0;
+    line-height: 40px;
+    font-size: 18px;
+    background: #b5b5b5;
+    color: #000;
+    border-radius: 5px;
+}
+.titleImp{
+    font-size: 20px;
+    color: #000;
+    
+}

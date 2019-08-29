@@ -54,8 +54,8 @@
                         <tr align="center" id="tr_{$v.id}">
                             <td>{$v.id}</td>
                             <td>{$v.username}</td>
-                            <td>{if condition="$v['id'] eq 1"}总管理员{/if}</td>
-                            <td>{$v.lasttime|getTime}</td>
+                            <td>{if condition="$v['qx_type'] eq 0"}总管理员{/if}</td>
+                            <td>{$v.lasttime}</td>
                             <td>{$v.lastip}</td>
                             <td>
                                 <!--{if $v.id == 1}-->

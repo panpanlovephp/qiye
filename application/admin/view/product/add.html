@@ -73,13 +73,13 @@
                     </select>
                 </div>
             </div>
-            {if $sid==13}
-            <div class="clearfix cl">
-                <label class="form-label col-2">会员职位：</label>
-                <div class="formControls col-10"><input type="text" class="input-text" value="{$data.work}" placeholder="职位简介" name="work"></div>
-            </div>
-            {/if}
-            {if $pid!=4&&$pid!=5&&$pid!=7}
+<!--            {if $sid==13}-->
+<!--            <div class="clearfix cl">-->
+<!--                <label class="form-label col-2">会员职位：</label>-->
+<!--                <div class="formControls col-10"><input type="text" class="input-text" value="{$data.work}" placeholder="职位简介" name="work"></div>-->
+<!--            </div>-->
+<!--            {/if}-->
+            {if $pid!=4&&$pid!=5&&$pid!=35}
             <div class=" clearfix cl">
                 <label class="form-label col-2">链接：</label>
                 <div class="formControls col-10"><input type="text" class="input-text" value="{$data.lian}" placeholder="请输入链接" name="remark"></div>
@@ -99,7 +99,7 @@
             <div class="formControls col-10"><input type="text" class="input-text" value="{$data.lian}" placeholder="视频连接地址" name="lian"></div>
             </div>
             {/if}
-            {if $pid!=4&&$pid!=5&&$pid!=7}
+            {if $pid!=4&&$pid!=5&&$pid!=35}
             <div class="clearfix cl">
                 <label class="form-label col-2">详细内容：</label>
                 <div class="formControls col-10">
@@ -160,24 +160,24 @@
             <div class="clearfix cl">
                 <label class="form-label col-2"><span class="c-red"></span>电子商务功能：</label>
                 <div class="formControls col-10">
-                    <input type="text" class="input-text"  style="width:45%;" value="{$data.caseInfo}" placeholder="请填写标题信息，每个信息之间用||分隔" name="caseInfo">
-                    <input type="text" class="input-text" style="width:45%;" value="{$data.info}" placeholder="请填写具体信息，每个信息之间用||分隔" name="info">
+                    <input type="text" class="input-text"  style="width:45%;" value="{$data.busFunc}" placeholder="请填写标题信息，每个信息之间用||分隔" name="busFunc">
+                    <input type="text" class="input-text" style="width:45%;" value="{$data.busFuncVal}" placeholder="请填写具体信息，每个信息之间用||分隔" name="busFuncVal">
                 </div>
             </div>
 
             <div class="clearfix cl">
                 <label class="form-label col-2"><span class="c-red"></span>支持功能：</label>
                 <div class="formControls col-10">
-                    <input type="text" class="input-text"  style="width:45%;" value="{$data.caseInfo}" placeholder="请填写标题信息，每个信息之间用||分隔" name="caseInfo">
-                    <input type="text" class="input-text" style="width:45%;" value="{$data.info}" placeholder="请填写具体信息，每个信息之间用||分隔" name="info">
+                    <input type="text" class="input-text"  style="width:45%;" value="{$data.supFunc}" placeholder="请填写标题信息，每个信息之间用||分隔" name="supFunc">
+                    <input type="text" class="input-text" style="width:45%;" value="{$data.supFuncVal}" placeholder="请填写具体信息，每个信息之间用||分隔" name="supFuncVal">
                 </div>
             </div>
 
             <div class="clearfix cl">
                 <label class="form-label col-2"><span class="c-red"></span>定价&订购：</label>
                 <div class="formControls col-10">
-                    <input type="text" class="input-text"  style="width:45%;" value="{$data.caseInfo}" placeholder="请填写标题信息，每个信息之间用||分隔" name="caseInfo">
-                    <input type="text" class="input-text" style="width:45%;" value="{$data.info}" placeholder="请填写具体信息，每个信息之间用||分隔" name="info">
+                    <input type="text" class="input-text"  style="width:45%;" value="{$data.priceTitle}" placeholder="请填写标题信息，每个信息之间用||分隔" name="priceTitle">
+                    <input type="text" class="input-text" style="width:45%;" value="{$data.price}" placeholder="请填写具体信息，每个信息之间用||分隔" name="price">
                 </div>
             </div>
 
@@ -197,13 +197,14 @@
             <div class="clearfix cl">
                 <label class="form-label col-2"><span class="c-red"></span>套餐价格：</label>
                 <div class="formControls col-10">
-                    <input type="text" class="input-text" value="{$data.packPri}" placeholder="请填写套餐名称" name="packPri"></div>
+                    <input type="text" class="input-text" value="{$data.price}" placeholder="请填写套餐价格" name="price"></div>
             </div>
             <div class="clearfix cl">
                 <label class="form-label col-2"><span class="c-red"></span>套餐信息：</label>
                 <div class="formControls col-10">
-                    <input type="text" class="input-text" value="{$data.packInfo}" placeholder="请填写套餐信息,每个信息之间用||分隔" name="packInfo"></div>
-            </div>
+                    <input type="text" class="input-text" style="width:45%;"  value="{$data.packInfo}" placeholder="请填写套餐简介,每个信息之间用||分隔" name="packInfo">
+                    <input type="text" class="input-text"  style="width:45%;"  value="{$data.packVal}" placeholder="请填写套餐信息,每个信息之间用||分隔" name="packVal"></div>
+    </div>
             <div class="clearfix cl">
                 <label class="form-label col-2"><span class="c-red"></span>服务器特色：</label>
                 <div class="formControls col-10">
@@ -212,7 +213,8 @@
                 </div>
             </div>
             {/if}
-            {if $pid==7}
+
+            {if $pid==35}
             <div class="clearfix cl">
                 <label class="form-label col-2">公司简介：</label>
                 <div class="formControls col-10">

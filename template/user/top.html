@@ -1,14 +1,56 @@
-<div id="header_bg">
-    <div id="header">
-        <div id="logo" class="float-lt"><a href="index.html"><img src="__PUBLIC__/user/images/shanghui_03.jpg" width="645" height="74"></a></div>
-        <div class="top_rt">
-            <div class="top_rfanh"><a href="{:url('index')}">返回首页</a><span>|</span><a href="{:url('contact')}">联系我们</a></div>
-            <br/>
-            <div class="top_sousuo">
-                <input name="" type="text" class="sous_text">
-                <input name="" type="button" class="sous_bot" value="搜索">
+<!-- 头部 -->
+<div class="top-box" id="public_header">
+    <div class="header" id="header">
+        <div class="menu">
+            <div class="toobar">
+                <div class="menu-left">
+                    <a href="#">我们提供优质的</a>
+                    <a href="#">美国主机、美国服务器、香港主机、香港服务器</a>
+                    <a href="#"> 租用服务</a>
+                </div>
+                <div class="menu-right">
+                    <ul>
+                        <li><a href="#"><i class="layui-icon layui-icon-survey"></i>工单中心</a></li>
+                        {if condition="$id eq null"}
+                        <li><a href="http://127.0.0.3/user.php/Login/index"><i class="layui-icon layui-icon-friends"></i>登录</a></li>
+                        {else/}
+                        <li><a href="#"><i class="layui-icon layui-icon-friends"></i>{$username},欢迎您</a></li>
+                        <li><a href="http://127.0.0.3/user.php/Login/logout">退出</a></a></li>
+                        <li><a href="http://127.0.0.3/user.php/Myorder/index"><i class="layui-icon layui-icon-password"></i>客户中心</a></li>
+                        {/if}
+                        {if condition="$id == ''"}
+                        <li><a href="#"><i class="layui-icon layui-icon-password"></i>客户中心</a></li>
+                        {/if}
+                        <li><a href="#"><i class="layui-icon layui-icon-home"></i>English</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="spacer"></div>
+    </div>
+    <div class="tab" id="tab">
+        <div class="logo">
+            <img src="__PUBLIC__/home/img/header/logo.png" />
+        </div>
+        <div class="tabbar-box">
+            <ul class="layui-nav" lay-filter="">
+                <li class="layui-nav-item"><a class="index-icon" href=""><i class="layui-icon layui-icon-home"></i></a></li>
+                {volist name="cateTree" id="vo"}
+                <li class="layui-nav-item">
+                    <a href="{$vo.lian.lian}">{$vo.parent_name.cat_name}</a>
+
+                    <dl class="layui-nav-child">
+                        <!-- 二级菜单 -->
+                        {volist name="$vo.sname" id="v"}
+                        <dd><a href="{$v.lian}">{$v.cat_name}</a></dd>
+                        {/volist}
+                    </dl>
+                </li>
+                {/volist}
+                <li class="layui-nav-item" style="margin-left:50px;"><a class="dinggou" href="http://127.0.0.3/user.php/Virtual/index/id/9">订购</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="hr-box">
+        <hr class="layui-bg-gray">
     </div>
 </div>

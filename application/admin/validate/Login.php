@@ -13,7 +13,6 @@ class Login extends Validate
 	                      'password.require' => '密码必须填写', 
 						  'code.require' => '验证码必须填写'
 						 ];
-						 
     protected function is_username($value, $rule, $data)
     {
         if (!preg_match('/^[a-z0-9_-]{5,16}$/', $value)) {

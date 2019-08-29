@@ -6,10 +6,6 @@ use think\Request;
 
 class Index extends Controller
 {
-    public function index()
-    {
-        echo 'test';
-    }
     //市
     public function shi()
     {

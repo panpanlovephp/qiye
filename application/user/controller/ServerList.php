@@ -5,10 +5,11 @@ namespace app\user\controller;
 use think\Db;
 
 
-class ServerList extends Com
+class Serverlist extends Com
 {
  public function index()
  {
-  return $this->fetch();
+     $this->assign('cateTree',model('Category')->getfl());
+     return $this->fetch();
  }
 }

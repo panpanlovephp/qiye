@@ -10,7 +10,7 @@ a {
 .top-box {
 	width: 100%;
 	height: auto;
-	background-image: url(../img/header/background-subpage.jpg);
+	background-image: url(../img/background-subpage.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -39,42 +39,43 @@ a {
 .toobar>div>a {
 	text-decoration: none;
 	color: white;
-	display: inline;
 }
 
-.menu-left001{
+.menu-left {
 	float: left;
 }
 
-.menu-left001>a:nth-child(1) {
-	width: auto !important;
+.menu-left a:nth-child(1) {
 	font-size: 14px;
+	float: left;
 }
 
-.menu-left001>a:nth-child(2) {
+.menu-left a:nth-child(2) {
 	font-size: 14px;
 	font-weight: bold;
+	float: left;
 }
 
-.menu-left001>a:nth-child(3) {
+.menu-left a:nth-child(3) {
 	font-size: 14px;
+	float: left;
 }
 
-.menu-right001 {
+.menu-right {
 	float: right;
 }
 
-.menu-right001>ul {
+.menu-right ul {
 	list-style: none;
 	float: left;
 }
 
-.menu-right001>ul>li {
+.menu-right ul li {
 	float: left;
 	margin-right: 10px;
 }
 
-.menu-right001>ul>li>a {
+.menu-right>ul>li>a {
 	text-decoration: none;
 	color: white;
 	margin-left: 5px;
@@ -135,11 +136,12 @@ a {
 .layui-bg-gray {
 	width: 65%;
 	margin: 10px auto;
+	background: #E0E0E0 !important;
 }
 
 .hr-box {
 	width: 100%;
-	height: 5px;
+	height: 1px;
 }
 
 .tabbar-box2 {

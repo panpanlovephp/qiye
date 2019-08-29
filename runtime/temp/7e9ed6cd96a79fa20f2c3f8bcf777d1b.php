@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"D:\phpStudy\PHPTutorial\WWW\qiye/application/admin\view\order\index.html";i:1565924025;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"D:\phpStudy\PHPTutorial\WWW\qiye/application/admin\view\order\index.html";i:1566110864;}*/ ?>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -37,12 +37,15 @@
                 <table class="table table-striped table-bordered table-hover" id="sample-table">
                     <thead>
                     <tr>
-
                         <th width="60">ID</th>
-                        <th width="60px" align="center">姓名</th>
-                        <th align="center">电话</th>
-                        <th align="center">Email</th>
-                        <th align="center" width="300">留言时间</th>
+                        <th width="200px" align="center">订单号</th>
+                        <th width="200px" align="center">分类名称</th>
+                        <th width="200px" align="center">套餐名称</th>
+                        <th width="200px" align="center">商品总价</th>
+                        <th width="200px" align="center">支付方式</th>
+                        <th width="200px" align="center">第三方支付方式</th>
+                        <th width="200px" align="center">联系方式</th>
+                        <th width="150px"   align="center">时间</th>
                         <th width="160px" align="center">操作</th>
                     </tr>
                     </thead>
@@ -50,13 +53,15 @@
                     <?php if(is_array($data) || $data instanceof \think\Collection || $data instanceof \think\Paginator): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
                     <tr align="center">
                         <td><?php echo $v['id']; ?></td>
-                        <td><?php echo $v['title']; ?></td>
-                        <td><?php echo $v['tel']; ?></td>
-                        <td><?php echo $v['email']; ?></td>
-                        <td><?php echo getTime($v['addtime']); ?></td>
-                        <td>
-                            <a class="btn btn-w-m btn-danger" onClick="confirm_delete()" href="<?php echo url('Message/delete',['id'=>$v['id']]); ?>">删除</a>
-                        </td>
+                        <td><?php echo $v['orderid']; ?></td>
+                        <td><?php echo $v['cname']; ?></td>
+                        <td><?php echo $v['pname']; ?></td>
+                        <td><?php echo $v['sumprice']; ?></td>
+                        <td><?php echo $v['payment']; ?></td>
+                        <td><?php echo $v['paymethod']; ?></td>
+                        <td><?php echo $v['contact']; ?></td>
+                        <td><?php echo $v['time']; ?></td>
+                        <td>[修改]|[删除]</td>
                     </tr>
                     <?php endforeach; endif; else: echo "" ;endif; ?>
                     <tr><td colspan="11"><?php echo $data->render();; ?></td></tr>

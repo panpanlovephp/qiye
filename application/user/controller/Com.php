@@ -15,6 +15,8 @@ class Com extends Controller
         parent::__construct();
         header('Content-type:text/html;charset=utf-8');
         Url::root('/index.php');
-    }
 
+        $info = db('user')->where('id', session('id'))->find();
+        $this->assign('username',$info['username']);
+        $this->assign('id',session('id'));    }
 }

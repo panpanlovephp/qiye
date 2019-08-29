@@ -21,13 +21,14 @@ class Category extends Common
     public function add()
     {
         $info=model('Category')->getfl();
+
         if (request()->isPost()) {
             $data = input('post.');
             if(!trim($data['cat_name'])){
                 $this->error('请填写名称');exit;
             }
             $catid = db('category')->insertGetId($data);
-            if ($catid > 0) {
+            if ($catid > 0){
                 $this->success('添加成功', 'Category/index');
             } else {
                 $this->error('添加失败');
@@ -37,7 +38,7 @@ class Category extends Common
             $dd=0;
             $this->assign(array(
                 'info'=>$info,
-                'dd'=>$dd,
+                'dd'=>$dd
             ));
             return $this->fetch();
         }
@@ -61,7 +62,7 @@ class Category extends Common
             $this->assign('data',$this->data);
             $this->assign(array(
                 'info'=>$info,
-                'dd'=>$dd,
+                'dd'=>$dd
             ));
             return $this->fetch();
         }

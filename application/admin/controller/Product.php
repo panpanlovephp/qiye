@@ -43,8 +43,6 @@ class Product extends Common
         if(Request::instance()->isPost())
         {
             $data  = input('post.');
-            print_r($data);
-            exit();
             $data['isfalse'] = ($data['isfalse']!="0"?"1":"0");
             $file = request()->file('image');
             if(isset($file)){
@@ -71,7 +69,7 @@ class Product extends Common
         $sid = input('sid');
         $bq = Db::name('Category')->where('parent_id',$sid)->select();
         $this->assign('bq',$bq);
-        $pid = $bq[1]['parent_id'];
+        $pid = $bq[0]['parent_id'];
         $this->assign('pid',$pid);
         $this->assign('sid',$sid);
         return $this->fetch('add');
@@ -99,10 +97,10 @@ class Product extends Common
                     echo $file->getError();
                 }
             }
-            $res = Db::name('Product')->update($data);
+            $res = Db::name('Product')->where('sid',$data['sid'])->update($data);
             if($res)
             {
-                $this->success('修改成功',url('prolist'));exit;
+                $this->success('修改成功',url('prolist'.'?sid='.$data['sid']));exit;
             }
             else
             {

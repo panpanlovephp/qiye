@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"D:\phpStudy\PHPTutorial\WWW\qiye/application/admin\view\category\index.html";i:1565678139;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"D:\phpStudy\PHPTutorial\WWW\qiye/application/admin\view\category\index.html";i:1566539574;}*/ ?>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -42,7 +42,7 @@
                             <tr>
                                 <td width="8%" height="32" bgcolor="#0099FF"><div align="center"><strong>序号</strong></div></td>
                                 <td width="10%" bgcolor="#0099FF"><strong>总类别</strong></td>
-                                <td width="54%" bgcolor="#0099FF" style="text-align: left"><strong>
+                                <td width="54%" bgcolor="#0099FF" style="text-align:left"><strong>
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;子分类
                                 </strong></td>
                                 <td width="20%" bgcolor="#0099FF"><strong>操作</strong></td>

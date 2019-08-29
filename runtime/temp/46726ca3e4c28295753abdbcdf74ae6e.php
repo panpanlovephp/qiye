@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:72:"D:\phpStudy\PHPTutorial\WWW\qiye/application/admin\view\index\index.html";i:1565925023;s:74:"D:\phpStudy\PHPTutorial\WWW\qiye/application/admin\view\public\header.html";i:1505379532;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:72:"D:\phpStudy\PHPTutorial\WWW\qiye/application/admin\view\index\index.html";i:1566290749;s:74:"D:\phpStudy\PHPTutorial\WWW\qiye/application/admin\view\public\header.html";i:1505379532;}*/ ?>
 <!doctype html>
 <html>
 <head>

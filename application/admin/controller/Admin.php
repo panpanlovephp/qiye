@@ -38,48 +38,33 @@ class Admin extends Common
 
 	public function add()
 	{
-		if($this->request->isPost())
+	    $username = input('username');
+		if($username!='')
 		{
-             $data= model('admin')->addData(input('post.'));
-			 if($data['status'] == 0){
-				 $this->error($data['info']);
+            $password = input('password');
+            $check_data = ['username' => $username, 'password' =>$password];
+            $validate = validate('Admin');
+            if (!$validate->check($check_data)) {
+                $this->error($validate->getError());
+            }
+             $res= Db::name('admin')->insert(input('post.'));
+
+			 if($res){
+                 $this->success("添加成功",'index');
 			 }else{
-				 $this->success($data['info'],'index');
+                 $this->error("添加失败");
 			 }
 		}
 		return $this->fetch();
    	}
 
-	//设置权限
-	public function setauth()
-	{
-		header("Content-type: text/html; charset=utf-8");
-		if($this->request->isPost())
-		{
-			Db::name('admin')->where('id',input('id'))->update([
-				'qx_type'=>input('qx_type',0),
-				'shi'=>input('shi',0),
-			]);
-			$this->success('设置成功','index');
-			exit;
-		}
-		//生成区域经理组
-		$quyu = Db::name('area')->where('pid=1')->field('id,title')->select();
-		$this->assign('quyu',$quyu);
-		$data = Db::name('admin')->where('id',input('get.id'))->find();
-		$this->assign('data',$data);
-		return $this->fetch();
-	}
 	public function delete()
 	{
 		$catid = input('id');
 		if (!$catid) {
 			$this->error('参数错误');exit;
 		}
-//		$data = db('admin')->where('pid',$catid)->find();
-//		if($data){
-//			$this->error('该区域下还有区域,不能直接删除');exit;
-//		}
+
 		db('admin')->where('id', $catid)->delete();
 		$this->success('删除成功','index');
 	}

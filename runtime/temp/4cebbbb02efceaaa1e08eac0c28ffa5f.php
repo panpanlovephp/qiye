@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"D:\phpStudy\PHPTutorial\WWW\qiye/application/admin\view\product\prolist.html";i:1565944078;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"D:\phpStudy\PHPTutorial\WWW\qiye/application/admin\view\product\prolist.html";i:1566461056;}*/ ?>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>

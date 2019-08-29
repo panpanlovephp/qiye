@@ -22,12 +22,12 @@ function login() {
 		closeBtn: 1,
 		area: ['600px', '300px'],
 		shade: 0.8,
-		id: 'LAY_layuipro' //设定一个id，防止重复弹出
-			,
+		id: 'LAY_layuipro' ,//设定一个id，防止重复弹出
+
 		btnAlign: 'c',
-		moveType: 1 //拖拽模式，0或者1
-			,
-		content: 'denglv.html',
+		moveType: 1 ,//拖拽模式，0或者1
+		//
+		content: 'http://127.0.0.3/user.php/Login/index',
 		success: function(layero) {
 			var btn = layero.find('.layui-layer-btn');
 			btn.find('.layui-layer-btn0').attr({

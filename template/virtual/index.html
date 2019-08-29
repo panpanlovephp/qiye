@@ -1,0 +1,316 @@
+<!-- 虚拟主机页面 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>虚拟主机页面</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/zhuce.css" />
+	<link rel="stylesheet" href="__PUBLIC__/home/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/header.css" />
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/footer.css" />
+	<link rel="stylesheet" href="__PUBLIC__/home/css/bootstrap.css" />
+	<script src="__PUBLIC__/home/js/index/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/lib/layui/css/layui.css" />
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/login.css" />
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/Virtual_Host.css" />
+	<link rel="stylesheet" href="__PUBLIC__/home/css/bootstrap.min.css">
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/home/js/header/header.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/home/lib/layui/layui.all.js"></script>
+	<link type="text/css" rel="stylesheet" href="__PUBLIC__/home/css/re.css" />
+	<style>
+		*{
+			list-style: none;
+			margin: 0;
+			outline: none;
+			padding: 0;
+		}
+		footer{
+			width: 100%;
+			clear: both;
+			font-size: 1.2em;
+			color: #9ca0b4;
+		}
+		.footerinner{
+			background-color:#242738;
+			padding: 35px 0 35px 0;
+		}
+		.footercontent{
+			margin: 0 auto;
+			max-width: 1250px;
+			width: 90%;
+		}
+		.col-md-3{
+			border-right: 1px solid gray
+		}
+		h4{
+			margin: 0 0 10px 0;
+			padding: 0 0 10px 0;
+			color: #fffefe;
+			font-size: 1.7em;
+			text-shadow: none;
+			text-transform: none;
+		}
+		a{
+			padding: 3px 0 3px 20px;
+			line-height: 27px;
+			text-decoration: none;
+			display: block;
+			color: #9ca0b4;
+		}
+		.footerbar{
+			background: #1C1F2D;
+			margin: 0 0 0px 0;
+			padding: 30px 0;
+		}
+		.footerbarinner{
+			margin: 0 auto;
+			max-width: 1250px;
+			width: 90%;
+		}
+		.footer>.footerbar>ul>li {
+			float: left;
+			width: 33.33%;
+			padding: 0 20px;
+			line-height: 1.2em;
+			padding-left: 70px;
+			min-height: 52px;
+			display: block;
+		}
+		.copyright {
+			line-height: 1.7em;
+			font-size: 0.8em;
+			padding: 25px 0 30px 0;
+			clear: both;
+			background-color:#242738;
+		}
+		.copyrightinner{
+			margin: 0 auto;
+			max-width: 1250px;
+			width: 90%;
+		}
+		.footer .copyright p {
+			line-height: 1;
+			margin: 0;
+			text-align: center;
+		}
+		.footer .copyright a {
+			padding: 0 10px;
+			border-left: #777 1px solid;
+			line-height: 1.7em;
+			color: #9ca0b4;
+			text-decoration: underline;
+		}
+		.copyright p {
+			line-height: 1;
+			margin: 0;
+			text-align: center;
+		}
+
+	</style>
+</head>
+<body>
+{include file="user/top"/}
+<div class="login-tit">
+	<span>{$title}</span>
+</div>
+<div class="Host-mainbox">
+	<div class="content-box">
+		<div class="a-tit">
+			{volist name="label" id="v"}
+			<a href="#" class="layui-btn" style="border-radius: 10%;">{$v}</a>
+			{/volist}
+		</div>
+		<div class="content-txt">
+			{volist name="content" id="v"}
+			<p>{$v}</p>
+			{/volist}
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<div class="Host-mainbox2">
+	<div class="Host-inner">
+		<div class="h1-tit">
+			<h1>选择您的{$title}套餐</h1>
+		</div>
+		<div class="list-main">
+			<div class="list-box1">
+				<div class="list-tit">
+					<h2>主要信息</h2>
+				</div>
+				<div class="list-txt">
+					{volist name="info" id="v"}
+					<div class="list-txt-item">{$v}</div>
+					{/volist}
+				</div>
+				<div class="list-kong1"></div>
+				<div class="tit-bukong">
+					<h2>方案对比</h2>
+				</div>
+				<div class="list-txt">
+					{volist name="caseInfo" id="v"}
+					<div class="list-txt-item">{$v}</div>
+					{/volist}
+				</div>
+				<div class="list-kong1"></div>
+				<div class="tit-bukong">
+					<h2>主要功能</h2>
+				</div>
+				<div class="list-txt">
+					{volist name="funcInfo" id="v"}
+					<div class="list-txt-item">{$v}</div>
+					{/volist}
+				</div>
+				<div class="list-kong1"></div>
+				<div class="tit-bukong">
+					<h2>电子商务功能</h2>
+				</div>
+				<div class="list-txt">
+					{volist name="busFunc" id="v"}
+					<div class="list-txt-item">{$v}</div>
+					{/volist}
+				</div>
+				<div class="list-kong1"></div>
+				<div class="tit-bukong">
+					<h2>支持的功能</h2>
+				</div>
+				<div class="list-txt">
+					{volist name="supFunc" id="v"}
+					<div class="list-txt-item">{$v}</div>
+					{/volist}
+				</div>
+				<div class="list-kong1"></div>
+				<div class="tit-bukong">
+					<h2>定价&订购</h2>
+				</div>
+				<div class="list-txt">
+					{volist name="priceTitle" id="v"}
+					<div class="list-txt-item">{$v}</div>
+					{/volist}
+				</div>
+			</div>
+
+			{volist name="b" id="v"}
+			<div class="list-box2">
+				<div class="list2-box">
+					<h2>{$v.packname}</h2>
+				</div>
+				<div class="list2-desc">
+					<p>{$v.packInfo}</p>
+				</div>
+				<div class="list2-txt">
+					{volist name="$v.infoVal" id="vv"}
+					<div class="list-txt-item">{$vv}</div>
+					{/volist}
+					<div class="list2-btnbox">
+						<div class="list2-btn-kb"></div>
+						<a href="http://127.0.0.3/user.php/Serverconfig/index" class="list2-btn">现在下单</a>
+					</div>
+				</div>
+				<div class="list2-box2">
+					<h2>{$v.packname}</h2>
+				</div>
+				<div class="list2-txt">
+					{volist name="$v.caseVal" id="vv"}
+					{if condition = "$vv == 000"}
+					<div class="list-txt-item"><i></i></div>
+					{elseif  condition = "$vv == 111"/}
+					<div class="list-txt-item"><i class="checked"></i></div>
+					{else/}
+					<div class="list-txt-item">{$vv}</div>
+					{/if}
+					{/volist}
+					<div class="list2-btnbox">
+						<div class="list2-btn-kb"></div>
+						<a href="http://127.0.0.3/user.php/Serverconfig/index/" class="list2-btn">现在下单</a>
+					</div>
+				</div>
+				<div class="list2-box2">
+					<h2>{$v.packname}</h2>
+				</div>
+				<div class="list2-txt">
+					{volist name="$v.funcVal" id="vv"}
+					{if condition = "$vv == 000"}
+					<div class="list-txt-item"><i></i></div>
+					{elseif  condition = "$vv == 111"/}
+					<div class="list-txt-item"><i class="checked"></i></div>
+					{else/}
+					<div class="list-txt-item">{$vv}</div>
+					{/if}
+					{/volist}
+					<div class="list2-btnbox">
+						<div class="list2-btn-kb"></div>
+						<a href="http://127.0.0.3/user.php/Serverconfig/index" class="list2-btn">现在下单</a>
+					</div>
+				</div>
+				<div class="list2-box2">
+					<h2>{$v.packname}</h2>
+				</div>
+				<div class="list2-txt">
+					{volist name="$v.busFuncVal" id="vv"}
+<!--					<div class="list-txt-item"><i class="checked"></i></div>-->
+					{if condition = "$vv == 000"}
+					<div class="list-txt-item"><i></i></div>
+					{elseif  condition = "$vv == 111"/}
+					<div class="list-txt-item"><i class="checked"></i></div>
+					{else/}
+					<div class="list-txt-item">{$vv}</div>
+					{/if}
+					{/volist}
+					<div class="list2-btnbox">
+						<div class="list2-btn-kb"></div>
+						<a href="http://127.0.0.3/user.php/Serverconfig/index" class="list2-btn">现在下单</a>
+					</div>
+				</div>
+				<div class="list2-box2">
+					<h2>{$v.packname}</h2>
+				</div>
+				<div class="list2-txt">
+					{volist name="$v.supFuncVal" id="vv"}
+					{if condition = "$vv == 000"}
+					<div class="list-txt-item"><i></i></div>
+					{elseif  condition = "$vv == 111"/}
+					<div class="list-txt-item"><i class="checked"></i></div>
+					{else/}
+					<div class="list-txt-item">{$vv}</div>
+					{/if}
+					{/volist}
+
+					<div class="list2-btnbox">
+						<div class="list2-btn-kb"></div>
+						<a href="http://127.0.0.3/user.php/Serverconfig/index" class="list2-btn">现在下单</a>
+					</div>
+				</div>
+				<div class="list2-box2">
+					<h2>{$v.packname}</h2>
+				</div>
+				<div class="list2-txt">
+					{volist name="$v.price" id="vv"}
+					<div class="list-txt-item">${$vv}/月</div>
+					{/volist}
+					<div class="list2-btnbox">
+						<div class="list2-btn-kb"></div>
+						<a href="http://127.0.0.3/user.php/Serverconfig/index" class="list2-btn">现在下单</a>
+					</div>
+				</div>
+			</div>
+			{/volist}
+
+		</div>
+	</div>
+</div>
+<!-- 尾部 -->
+{include file="user/foot"/}
+
+<script src="__PUBLIC__/home/lib/layui/layui.js"></script>
+<script type="text/javascript" src="__PUBLIC__/home/js/header/jquery.js"></script>
+<script src="__PUBLIC__/home/js/header/header.js"></script>
+<script>
+	//注意：导航 依赖 element 模块，否则无法进行功能性操作
+	layui.use('element', function() {
+		var element = layui.element;
+	});
+
+</script>
+</body>

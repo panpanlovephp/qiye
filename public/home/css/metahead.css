@@ -1,0 +1,44 @@
+@media screen and (max-width: 1165px){
+	.toobar{
+		width: 100%;
+	}
+	.menu-left{
+		float: none;
+		width: 50%;
+		margin: auto;
+		overflow: hidden;
+	}
+	.menu-right{
+		display: none;
+	}
+	.tab{
+		width: 90%;
+		margin: auto;
+		height: 140px;
+	}
+    .logo{
+		float: none;
+		margin: auto;
+	}
+	.tabbar-box{
+		float: none;
+		width: 100%;
+	}
+	.layui-bg-gray {
+		width: 90%;
+		margin: 10px auto;
+	}
+}
+@media screen and (max-width: 930px){
+	.menu{
+		height: 70px;
+	}
+	.menu-left{
+		height: 70px;
+	}
+}
+@media screen and (max-width: 750px){
+	.tabbar-box{
+		display: none;
+	}
+}

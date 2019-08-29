@@ -5,13 +5,13 @@ use think\Controller;
 
 class Common extends Controller
 {
-//  protected function _initialize()
-//  {
-//      if (!session('admin_id') ) {
-//          $this->redirect(url('Login/index'));
-//      }
-//      $this->webconfig = db('system')->where('id', 1)->find();
-//  }
+  protected function _initialize()
+  {
+      if (!session('admin_id') ) {
+          $this->redirect(url('Login/index'));
+      }
+      $this->webconfig = db('system')->where('id', 1)->find();
+  }
     public function logout()
     {
         session('admin_id', null);
